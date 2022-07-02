@@ -1,0 +1,119 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #263746;
+    overflow: hidden;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+
+.topnavTransparent {
+    background-color: transparent;
+    overflow: hidden;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+
+#header {
+    background-color: transparent;
+    overflow: hidden;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    transition: ease 0.4s;
+}
+
+#navImage{
+    height: 175px;
+    width: auto;
+    margin-bottom: 25px;
+    border-radius: 5px 5px 0 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .mobile-nav{
+        float: right;
+    }
+
+    .logo-image{
+        width: auto;
+        height: 75px;
+        overflow: hidden;
+        padding: 20px 0;
+        margin-left: 25px;
+    }
+
+    #button{
+        display: none;
+    }
+
+    .topnav-right a {
+      float: right;
+      color: black;
+      text-align: center;
+      padding: 4rem;
+      text-decoration: none;
+      font-size: 17px;
+        /*vertical-align: center;*/
+        display: block;
+      /*change font, make a top margin and make that part grey, change box size when hovering to smaller*/
+    }
+
+    .dropdown{
+        height: auto;
+        width: 75px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (min-width: 1301px){
+    .mobile-nav{
+        display: none;
+    }
+
+     .logo-image{
+        width: auto;
+        height: 90px;
+        overflow: hidden;
+        padding: 20px 0;
+         margin-left: 50px;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav-right a {
+        display: inline-block;
+      float: right;
+      color: black;
+      text-align: center;
+      padding: 4rem;
+      text-decoration: none;
+      font-size: 17px;
+        vertical-align: center;
+      /*change font, make a top margin and make that part grey, change box size when hovering to smaller*/
+    }
+}
+
+/* Change the color of links on hover */
+.topnav-right a:hover {
+  /*background-color: #ddd;*/
+  color: #76C4D5; /*change to the leo gray or blue*/
+}
+
+/* Add a color to the active/current link */
+.topnav-right a.active {
+  color: #B687B8;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}

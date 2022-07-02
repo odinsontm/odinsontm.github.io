@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Lounge</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'leo/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'leo/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'leo/application.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'leo/images/Final Logo.png' %}"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap">
+    <style>
+      body {
+        font-family: 'Red Hat Text', regular;
+      }
+    </style>
+</head>
+<body style = "background-image:  linear-gradient(to bottom, white, #76C4D5); margin: 0;">
+    <nav>
+        <header>
+            <div id = "header">
+                <div>
+                    <a href="{% url 'dashboard' %}">
+                        <img class = "dashimg" id="navImage" src="{% static "leo/images/Final Logo.png" %}">
+                    </a>
+                </div>
+            </div>
+        </header>
+    </nav>
+
+
+        <div class="outer">
+
+                <div class ="settings">
+                    <a href="{% url 'account' %}">
+                        <img class = "settImg" src="{% static "leo/images/Settings IconFinal.png" %}">
+                    </a>
+                </div>
+            <div>
+                <div class="card">
+                    <a href = "{% url 'calendar' %}" class="container blockLink">
+                        <img class ="smallimg" style="height:150px; width:auto; margin-top: 25px;" src="{% static "leo/images/Calendar_1Final.png" %}">
+
+                    </a>
+                    <h3 style="text-align: center;">Calendar</h3>
+                </div>
+
+                <div class="card">
+                    <a href = "{% url 'membership' %}" class="container blockLink">
+                        <img class ="smallimg" style="height:auto; width:175px; margin-top: 35px;" src="{% static "leo/images/WalletFinal.png" %}">
+
+                    </a>
+                    <h3 style="text-align: center;">My Membership</h3>
+                </div>
+
+            <div></div>
+
+                <div class="card">
+                    <a href = "{% url 'newsletter' %}"class="container blockLink">
+                        <img class ="smallimg" style="height:150px; width:auto; margin-top: 25px;" src="{% static "leo/images/NewsletterFinal.png" %}">
+
+                    </a>
+                    <h3 style="text-align: center;">Newsletter</h3>
+                </div>
+
+                <div class="card">
+                    <a href = "{% url 'exclusive' %}" class="container blockLink">
+                        <img class ="smallimg" style="height:145px; width:auto; margin-top: 25px;" src="{% static "leo/images/Exclusive ContentFinal.png" %}">
+
+                    </a>
+                    <h3 style="text-align: center;">Exclusive Content</h3>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    <footer>
+       <body style="margin: 0;">
+            <div class = "footernav">
+                <hr style="margin-bottom: 15px; background-color: white; width: 90%;">
+                <p><a href="{% url 'account_logout' %}">Logout</a></p>
+                <a href="#">Back to top</a>
+                <div style="margin-top: 50px"></div>
+            </div>
+        </body>
+    </footer>
+
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+              document.getElementById("navImage").style.height = "100px";
+            document.getElementById("navImage").style.width = "auto";
+            document.getElementById("header").style.backgroundColor = "white";
+          } else {
+              document.getElementById("navImage").style.height = "175px";
+            document.getElementById("navImage").style.width = "auto";
+            document.getElementById("header").style.backgroundColor = "transparent";
+          }
+        }
+    </script>
+</body>
+</html>

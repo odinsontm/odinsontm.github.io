@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+    {% block content %}
+
+        {% load static %}
+        <div style="display: flex; margin-top: 10rem;">
+
+            <div class = "pic" style="margin-right: 25px; margin-left: 50px; position: fixed">
+                <img style="height:100px; width:auto; margin-top: 25px;" vertical-align="left" src="{% static "leo/images/NewsletterFinal.png" %}">
+            </div>
+
+            <div class="content">
+                    <h1><b>Newsletter</b></h1>
+                    {% for news in object_list %}
+                        <h3>{{ news.post_date }}</h3>
+                        {% if news.header_image %}
+                            <img class="imgSizeNews" src="{{ news.header_image.url }}">
+                        {% endif %}
+                        <div>
+                            <h4>{{ news.title }}</h4>
+                            <p>{{ news.body }}</p>
+                        </div>
+                        {% if news.link %}
+                        <div>
+                            <a href="{{ news.link }}" style="color: #D7006D;"><div style="background-color: white; padding: 5px;">
+                            <p style="margin-left: 1em">Click here for more info</p></div></a>
+                        </div>
+                        {% endif %}
+                        <br>
+                    {% endfor %}
+            </div>
+        </div>
+
+        <div style="margin-bottom: 100px"></div>
+    {% endblock %}

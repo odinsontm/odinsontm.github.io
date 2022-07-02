@@ -1,0 +1,18 @@
+{% extends "account/base.html" %}
+{% block logincontent %}
+<h2>Sign in</h2>
+<form method="POST" action="{% url 'account_login' %}">
+{% csrf_token %}
+{{ form.as_p }}
+{% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+{% endif %}
+<div style="margin-bottom: 1rem; text-align: left; margin-left: 1rem">
+    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">Forgot Password?</a>
+</div>
+<button type="submit">Login</button>
+<div style="margin-top: 1rem">
+    <a href="{{ signup_url }}">New to The Lounge? Create Account</a>
+</div>
+</form>
+{% endblock %}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Lounge</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'leo/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'leo/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'leo/application.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'leo/login.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'leo/images/Final Logo.png' %}"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap">
+
+    <style>
+        body {
+            font-family: 'Red Hat Text', regular;
+        }
+
+        p {
+            font-family: 'Red Hat Display', regular;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+<nav>
+    <div id="header" style="display: block">
+        <div>
+            <a href="{% url 'dashboard' %}">
+                <img id="navImage" class = "dashimg" src="{% static "leo/images/Final Logo.png" %}">
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="outer flex">
+    <div class="inner" style="padding-bottom: 25%">
+        <div class="content-body">
+            <div class="wrapper">
+                <div class="login-container">
+                    {% block logincontent %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footernav">
+        <hr style="margin-bottom: 15px; background-color: white; width: 90%;">
+        <p><a href="#">Back to top</a></p>
+        <div style="margin-top: 50px"></div>
+    </div>
+</footer>
+
+<script>
+    // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("navImage").style.height = "100px";
+            document.getElementById("navImage").style.width = "auto";
+            document.getElementById("header").style.backgroundColor = "white";
+        } else {
+            document.getElementById("navImage").style.height = "175px";
+            document.getElementById("navImage").style.width = "auto";
+            document.getElementById("header").style.backgroundColor = "transparent";
+        }
+    }
+</script>
+
+</body>
+</html>
