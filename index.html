@@ -1,59 +1,344 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-header {background-color: #202020; overflow: hidden; position: fixed; top: 0; width: 100%; padding-left: 10%;}
-body {background-color: #181818; width: 100%; margin: 0 auto; }
-body div {margin-right: 20%; margin-left: 20%; }
-body div div {margin: 0;}
-h1, h2, h3, h4 {color: white;}
-p {color: #b3b3b3;}
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
-hr {margin-top:1.5em; margin-bottom:1.5em;}
-li {color: #b3b3b3}
-</style>
-</head>
-<body>
-<header style = "display: block;">
-<h1>Thor Madsen</h1>
-</header>
-<div style="margin-bottom: 10%">
-<h2 style="margin-top: 20%;">Welcome to my Portfolio</h2>
-<h3>This is a portfolio of projects I completed at Westminster College.</h3>
-<h3><a href="https://github.com/odinsontm/odinsontm.github.io/blob/main/ResumeThorMadsen.pdf" target="_blank">Click here to view Resume</a></h3>
-<hr>
-<a href="https://github.com/cmpt375-2021fall/client-project-leonardo-dev-team" target="_blank"><div style="background-color:#282828; padding:1em; border-radius: 5px;">
-<img src="docs/assets/Leonardo Instagram Posts-03.png" alt="Leonardo Lounge Image" width="auto" height="200px">
-  <h3>The Leonardo Member Lounge</h3>
-<p>This project was a part of CMPT 375 where a team of developers and designers worked together to create a website for a real-life client. Our task was to create a membership portal for The Leonardo Museum. This website was in response to the need for a better membership solution for the members. The portal consisted of a dashboard, access to a digital membership card, newsletter, calendar of events, and exclusive content for members.</p>
-<p>Completing this class gave me valuable experience in software design and development. Moreover, this class gave me experience working with a team of developers and designers in a production setting. It also gave me practice with my creative problem-solving skills when things did not go to plan. Additionally it strengthened my skills in managing and resolving group issues.</p>
-<p>Technologies Used:</p>
-<ul>
-  <li>Python/Django</li>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>Javascript</li>
-</ul>
-  <a href="https://leonardo-lounge.herokuapp.com/" target="_blank"><p>Click Here to view Leonardo Website</p></a>
-<p>Email: user1@test.com | Password: 20Leonardo21</p>  
-</div></a>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: 'Arimo', sans-serif;
+      }
+      header {
+        background-color: #000000;
+        padding: 0 5% 0 5%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 10%;
+      }
+      body {
+        background: #111;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .wrapper {
+        margin: 6% 5% 0 5%;
+      }
 
-<br>
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: white;
+        font-family: 'Secular One', sans-serif;
+      }
+      p {
+        color: #b3b3b3;
+      }
+      a {
+        color: #ffda00;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      a:active {
+        text-decoration: none;
+      }
+      hr {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+      }
+      li {
+        color: #b3b3b3;
+      }
 
-<a href="https://github.com/odinsontm/NumberNinjaBuild" target="_blank"><div style="background-color:#282828; padding:1em; border-radius: 5px;">
-<img src="docs/assets/transparentlogo.png" alt="Number Ninja With Dragon" width="auto" height="200px">
-<h3>Number Ninja</h3>
-<p>This 2D platformer was created as a part of CMPT 322. The goal of the class was to simulate a real-world client-building job. Our assignment was to create a game that helped 2nd and 3rd graders with their math skills. So, we made a 2D platformer where the user acted as a ninja running away from a dragon. Along the way, there are jumps where the user is prompted with a math question. To land the jump, the user must answer the question correctly. If the user completes all the questions and makes all the jumps, they win the level.</p>
-<p>This project gave me experience in software design and development as it applies to game development in a team setting. It also gave me experience working as a team, coordinating work, and solving issues as they arose.</p>
-<p>Technologies Used:</p>
-<ul>
-  <li>Unity</li>
-  <li>C#</li>
-</ul>
-</div></a>
-</div>
-</body>
+      .newCard hr {
+        background: linear-gradient(to right, #fdbc2a, #b11f1e, #1d296c);
+        height: 5px;
+        border: 0;
+        width: 17vw;
+      }
+
+      .newCard {
+        display: inline-flex;
+        background: #000000;
+        border-radius: 10px;
+        height: 60vh;
+        width: 20vw;
+        overflow: hidden;
+        transition: 350ms;
+        box-shadow: -2rem 0 3rem -2rem #000;
+      }
+
+      .newCard .cardLeft {
+        height: 100%;
+        width: 20vw;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .newCard .cardLeft img {
+        height: 65vh;
+        width: auto;
+      }
+
+      .newCard .cardLeft .title {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        color: white;
+      }
+
+      .newCard .cardRight {
+        width: 40vw;
+        padding: 0 2rem 0 2rem;
+        display: none;
+        transition: 350ms;
+      }
+
+      .newCard:hover {
+        width: 65vw;
+        transition: 350ms;
+      }
+
+      .newCard:hover .cardLeft + .cardRight {
+        display: inline-flex;
+        transition: 350ms;
+      }
+
+      article {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 70vh;
+        grid-gap: 5px;
+        max-width: 100%;
+        overflow-x: scroll;
+      }
+
+      section:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        z-index: 1;
+      }
+      section:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        z-index: 0;
+      }
+      section:nth-child(3) {
+        grid-column: 3 / 4;
+        grid-row: 1;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>THOR MADSEN</h1></header>
+    <div class="wrapper">
+      <div style="margin: 5% 0 10% 0">
+        <h2>Welcome to my Portfolio</h2>
+        <h3>
+          This is a portfolio of projects I completed at Westminster College.
+        </h3>
+        <h3>
+          <a
+            href="https://github.com/odinsontm/odinsontm.github.io/blob/main/ResumeThorMadsen.pdf"
+            target="_blank"
+            >Click here to view Resume</a
+          >
+        </h3>
+        <hr />
+
+        <article>
+          <section>
+            <span>
+              <div class="newCard">
+                <div class="cardLeft">
+                  <img
+                    src="docs/assets/Leonardo Instagram Posts-03.png"
+                    alt="Leonardo Lounge Image"
+                  />
+                  <div class="title">
+                    <h1>Leonardo Member Lounge</h1>
+                    <hr />
+                  </div>
+                </div>
+                <div class="cardRight">
+                  <div class="cardBody">
+                    <div class="mainText">
+                      <p>
+                        This project was a part of CMPT 375 where a team of
+                        developers and designers worked together to create a
+                        website for a real-life client. Our task was to create a
+                        membership portal for The Leonardo Museum. This website
+                        was in response to the need for a better membership
+                        solution for the members. The portal consisted of a
+                        dashboard, access to a digital membership card,
+                        newsletter, calendar of events, and exclusive content
+                        for members.
+                      </p>
+                      <p>
+                        Completing this class gave me valuable experience in
+                        software design and development. Moreover, this class
+                        gave me experience working with a team of developers and
+                        designers in a production setting. It also gave me
+                        practice with my creative problem-solving skills when
+                        things did not go to plan. Additionally it strengthened
+                        my skills in managing and resolving group issues.
+                      </p>
+                    </div>
+                    <div class="cardList">
+                      <p>Technologies Used:</p>
+                      <ul>
+                        <li>Python/Django</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                      </ul>
+                      <p>
+                        <a
+                          href="https://github.com/cmpt375-2021fall/client-project-leonardo-dev-team"
+                          target="_blank"
+                          >Click here to view source code</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </section>
+          <section>
+            <span>
+              <div class="newCard">
+                <div class="cardLeft">
+                  <img
+                    src="docs/assets/transparentlogo.png"
+                    alt="Number Ninja With Dragon"
+                  />
+                  <div class="title">
+                    <h1>Number Ninja</h1>
+                    <hr />
+                  </div>
+                </div>
+                <div class="cardRight">
+                  <div class="cardBody">
+                    <div class="mainText">
+                      <p>
+                        This 2D platformer was created as a part of CMPT 322.
+                        The goal of the class was to simulate a real-world
+                        client-building job. Our assignment was to create a game
+                        that helped 2nd and 3rd graders with their math skills.
+                        So, we made a 2D platformer where the user acted as a
+                        ninja running away from a dragon. Along the way, there
+                        are jumps where the user is prompted with a math
+                        question. To land the jump, the user must answer the
+                        question correctly. If the user completes all the
+                        questions and makes all the jumps, they win the level.
+                      </p>
+                      <p>
+                        This project gave me experience in software design and
+                        development as it applies to game development in a team
+                        setting. It also gave me experience working as a team,
+                        coordinating work, and solving issues as they arose.
+                      </p>
+                    </div>
+                    <div class="cardList">
+                      <p>Technologies Used:</p>
+                      <ul>
+                        <li>Unity</li>
+                        <li>C#</li>
+                      </ul>
+                      <p>
+                        <a
+                          href="https://github.com/odinsontm/NumberNinjaBuild"
+                          target="_blank"
+                          >Click here to view source code</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </section>
+          <section>
+            <span>
+              <div class="newCard">
+                <div class="cardLeft">
+                  <img src="./cool3.jpg" alt="skyline" />
+                  <div class="title">
+                    <h1>Leonardo Member Lounge</h1>
+                    <hr />
+                  </div>
+                </div>
+                <div class="cardRight">
+                  <div class="cardBody">
+                    <div class="mainText">
+                      <p>
+                        This project was a part of CMPT 375 where a team of
+                        developers and designers worked together to create a
+                        website for a real-life client. Our task was to create a
+                        membership portal for The Leonardo Museum. This website
+                        was in response to the need for a better membership
+                        solution for the members. The portal consisted of a
+                        dashboard, access to a digital membership card,
+                        newsletter, calendar of events, and exclusive content
+                        for members.
+                      </p>
+                      <p>
+                        Completing this class gave me valuable experience in
+                        software design and development. Moreover, this class
+                        gave me experience working with a team of developers and
+                        designers in a production setting. It also gave me
+                        practice with my creative problem-solving skills when
+                        things did not go to plan. Additionally it strengthened
+                        my skills in managing and resolving group issues.
+                      </p>
+                    </div>
+                    <div class="cardList">
+                      <p>Technologies Used:</p>
+                      <ul>
+                        <li>Python/Django</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                      </ul>
+                      <p>
+                        <a
+                          href="https://github.com/cmpt375-2021fall/client-project-leonardo-dev-team"
+                          target="_blank"
+                          >Click here to view source code</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </section>
+        </article>
+      </div>
+    </div>
+  </body>
 </html>
