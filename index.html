@@ -23,17 +23,17 @@
         position: fixed;
         top: 0;
         width: 100%;
-        height: 10%;
+        height: 5rem;
       }
       body {
         background: #111;
         width: 100vw;
         height: 100vh;
         margin: 0 auto;
-        overflow: hidden;
+        overflow-x: hidden;
       }
       .wrapper {
-        margin: 6% 5% 0 5%;
+        margin: 8rem 5% 0 5%;
       }
 
       h1,
@@ -89,7 +89,7 @@
 
       .newCard .cardLeft {
         height: 100%;
-        width: 20vw;
+        width: 22vw;
         overflow: hidden;
         position: relative;
       }
@@ -97,6 +97,16 @@
       .newCard .cardLeft img {
         height: 65vh;
         width: auto;
+        mask-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.65) 100%
+        );
+        -webkit-mask-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.65) 100%
+        );
       }
 
       .newCard .cardLeft .title {
@@ -130,6 +140,7 @@
         grid-gap: 5px;
         max-width: 100%;
         overflow-x: scroll;
+        overflow-y: hidden;
       }
 
       section:nth-child(1) {
@@ -150,10 +161,15 @@
         display: flex;
         justify-content: center;
       }
+      header img {
+        margin: 1rem 0 1rem 0;
+        height: 3rem;
+        width: auto;
+      }
     </style>
   </head>
   <body>
-    <header><h1>THOR MADSEN</h1></header>
+    <header><img src="./THORLOGO.svg" alt="Thor Madsen" /></header>
     <div class="wrapper">
       <div style="margin: 5% 0 10% 0">
         <h2>Welcome to my Portfolio</h2>
@@ -286,9 +302,9 @@
             <span>
               <div class="newCard">
                 <div class="cardLeft">
-                  <img src="./cool3.jpg" alt="skyline" />
+                  <img src="docs/assets/pfppng.png" alt="Ski Team Inventory" />
                   <div class="title">
-                    <h1>Leonardo Member Lounge</h1>
+                    <h1>Ski Team Inventory</h1>
                     <hr />
                   </div>
                 </div>
@@ -296,39 +312,29 @@
                   <div class="cardBody">
                     <div class="mainText">
                       <p>
-                        This project was a part of CMPT 375 where a team of
-                        developers and designers worked together to create a
-                        website for a real-life client. Our task was to create a
-                        membership portal for The Leonardo Museum. This website
-                        was in response to the need for a better membership
-                        solution for the members. The portal consisted of a
-                        dashboard, access to a digital membership card,
-                        newsletter, calendar of events, and exclusive content
-                        for members.
+                        This project was a part of CMPT 307 where a partner and
+                        I created a inventory of the Westminster Ski Team, their
+                        type of skis, and the brands of the skis. There is also
+                        information about each skier on the team.
                       </p>
                       <p>
-                        Completing this class gave me valuable experience in
-                        software design and development. Moreover, this class
-                        gave me experience working with a team of developers and
-                        designers in a production setting. It also gave me
-                        practice with my creative problem-solving skills when
-                        things did not go to plan. Additionally it strengthened
-                        my skills in managing and resolving group issues.
+                        Completing this course gave me valuable experience in
+                        database schema design and useage. This project gave me
+                        experience working in a small team in which we created,
+                        managed, and interacted with SQL queries and databases.
                       </p>
                     </div>
                     <div class="cardList">
                       <p>Technologies Used:</p>
                       <ul>
-                        <li>Python/Django</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
+                        <li>Python</li>
+                        <li>SQL</li>
                       </ul>
                       <p>
                         <a
-                          href="https://github.com/cmpt375-2021fall/client-project-leonardo-dev-team"
+                          href="https://github.com/odinsontm/odinsontm.github.io/tree/main/projects/CMPT%20307"
                           target="_blank"
-                          >Click here to view source code</a
+                          >Click here to view program and schema</a
                         >
                       </p>
                     </div>
