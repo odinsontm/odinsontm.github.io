@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,10 +17,8 @@
         font-family: 'Arimo', sans-serif;
       }
       header {
-        background-color: #000000;
         padding: 0 5% 0 5%;
         overflow: hidden;
-        position: fixed;
         top: 0;
         width: 100%;
         height: 5rem;
@@ -33,7 +31,7 @@
         overflow-x: hidden;
       }
       .wrapper {
-        margin: 8rem 5% 0 5%;
+        margin: 0 5% 0 5%;
       }
 
       h1,
@@ -41,7 +39,8 @@
       h3,
       h4 {
         color: white;
-        font-family: 'Secular One', sans-serif;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 700;
       }
       p {
         color: #b3b3b3;
@@ -89,8 +88,7 @@
 
       .newCard .cardLeft {
         height: 100%;
-        width: 22vw;
-        overflow: hidden;
+        min-width: 15rem;
         position: relative;
       }
 
@@ -118,9 +116,11 @@
 
       .newCard .cardRight {
         width: 40vw;
+        margin-left: 3rem;
         padding: 0 2rem 0 2rem;
         display: none;
         transition: 350ms;
+        overflow-y: scroll;
       }
 
       .newCard:hover {
@@ -135,8 +135,7 @@
 
       article {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: 70vh;
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: 5px;
         max-width: 100%;
         overflow-x: scroll;
@@ -146,15 +145,21 @@
       section:nth-child(1) {
         grid-column: 1 / 2;
         grid-row: 1;
-        z-index: 1;
       }
       section:nth-child(2) {
         grid-column: 2 / 3;
         grid-row: 1;
-        z-index: 0;
       }
       section:nth-child(3) {
         grid-column: 3 / 4;
+        grid-row: 1;
+      }
+      section:nth-child(4) {
+        grid-column: 4/5;
+        grid-row: 1;
+      }
+      section:nth-child(5) {
+        grid-column: 5/6;
         grid-row: 1;
       }
       section {
@@ -171,21 +176,86 @@
   <body>
     <header><img src="docs/assets/THORLOGO.svg" alt="Thor Madsen" /></header>
     <div class="wrapper">
-      <div style="margin: 5% 0 10% 0">
-        <h2>Welcome to my Portfolio</h2>
-        <h3>
+      <div style="margin: 0 0 10% 0">
+        <h1>Welcome to my Portfolio</h2>
+        <h2>
           This is a portfolio of projects I completed at Westminster College.
-        </h3>
-        <h3>
+        </h4>
+        <h4>
+          <a href="mailto: thormmadsen@gmail.com"
+            >Contact me at: thormmadsen@gmail.com</a
+          >
+        </h4>
+        <h4>
+          <a
+            href="https://www.linkedin.com/in/thor-madsen-39ba66245/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </h4>
+        <h4>
           <a
             href="https://github.com/odinsontm/odinsontm.github.io/blob/main/ResumeThorMadsen.pdf"
             target="_blank"
             >Click here to view Resume</a
           >
-        </h3>
+        </h4>
         <hr />
 
         <article>
+          <section>
+            <span>
+              <div class="newCard">
+                <div class="cardLeft">
+                  <img src="docs/assets/TheDeftPic.jpg" alt="TheDeft" />
+                  <div class="title">
+                    <h1>TheDEFT</h1>
+                    <hr />
+                  </div>
+                </div>
+                <div class="cardRight">
+                  <div class="cardBody">
+                    <div class="mainText">
+                      <p>
+                        This project was a part of CMPT 390 capstone class. For
+                        this project I created a e-commerce website using
+                        ReactJS and NodeJS. This website needed to be
+                        user-friendly, visually pleasing, and function as a
+                        shop. In order to create a cohesive design, I created a
+                        fake brand called TheDEFT. This design allowed me to
+                        showcase my design and frontend skills, as well as make
+                        a realistic example of this site in the real world.
+                      </p>
+                      <p>
+                        This project allowed me to be creative in design and use
+                        my problem-solving skills to build a substantial project
+                        in a short peroid of time. I had to prioritze certain
+                        features over others along with make realistic goals for
+                        myself. This gave me experience in fullstack web
+                        development along with UI/UX design.
+                      </p>
+                    </div>
+                    <div class="cardList">
+                      <p>Technologies Used:</p>
+                      <ul>
+                        <li>ReactJS</li>
+                        <li>NodeJS</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                      </ul>
+                      <p>
+                        <a
+                          href="https://github.com/odinsontm/senior-project-ecommerce-website"
+                          target="_blank"
+                          >Click here to view source code</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </section>
           <section>
             <span>
               <div class="newCard">
@@ -220,7 +290,9 @@
                         designers in a production setting. It also gave me
                         practice with my creative problem-solving skills when
                         things did not go to plan. Additionally it strengthened
-                        my skills in managing and resolving group issues.
+                        my skills in managing and resolving group issues. This
+                        gave me effective practice with communication amoung
+                        team members and our actual client The Leonardo Museum.
                       </p>
                     </div>
                     <div class="cardList">
@@ -249,8 +321,8 @@
               <div class="newCard">
                 <div class="cardLeft">
                   <img
-                    src="docs/assets/transparentlogo.png"
-                    alt="Number Ninja With Dragon"
+                    src="docs/assets/nnlogo.png"
+                    alt="Number Ninja"
                   />
                   <div class="title">
                     <h1>Number Ninja</h1>
@@ -263,20 +335,27 @@
                       <p>
                         This 2D platformer was created as a part of CMPT 322.
                         The goal of the class was to simulate a real-world
-                        client-building job. Our assignment was to create a game
-                        that helped 2nd and 3rd graders with their math skills.
-                        So, we made a 2D platformer where the user acted as a
-                        ninja running away from a dragon. Along the way, there
-                        are jumps where the user is prompted with a math
-                        question. To land the jump, the user must answer the
-                        question correctly. If the user completes all the
-                        questions and makes all the jumps, they win the level.
+                        client-building job. Our assignment was to create a
+                        entertaining yet informative game that helped 2nd and
+                        3rd graders with their math skills. So, we made a 2D
+                        platformer where the user acted as a ninja running away
+                        from a dragon. Along the way, there are jumps where the
+                        user is prompted with a math question. To land the jump,
+                        the user must answer the question correctly. If the user
+                        completes all the questions and makes all the jumps,
+                        they win the level.
                       </p>
                       <p>
                         This project gave me experience in software design and
-                        development as it applies to game development in a team
-                        setting. It also gave me experience working as a team,
-                        coordinating work, and solving issues as they arose.
+                        development as it applies to game development. It also
+                        gave me experience working as a team, coordinating work,
+                        and solving issues as they arose. This gave me effective
+                        practice with communication amoung team members and our
+                        pretend client (our professor). It gave our team an
+                        oppourtunity to apply learning in a creative and
+                        engaging way. As well as practice global resposibility
+                        by creating a engaging learning tool for 2nd-3rd grade
+                        teachers.
                       </p>
                     </div>
                     <div class="cardList">
@@ -288,6 +367,56 @@
                       <p>
                         <a
                           href="https://github.com/odinsontm/NumberNinjaBuild"
+                          target="_blank"
+                          >Click here to view source code</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </section>
+          <section>
+            <span>
+              <div class="newCard">
+                <div class="cardLeft">
+                  <img
+                    src="docs/assets/DecisionTree.png"
+                    alt="Leonardo Lounge Image"
+                  />
+                  <div class="title">
+                    <h1>Decision Tree</h1>
+                    <hr />
+                  </div>
+                </div>
+                <div class="cardRight">
+                  <div class="cardBody">
+                    <div class="mainText">
+                      <p>
+                        This assignment was a part of CMPT 311 Machine Learning.
+                        The assignment was a decision tree that needed to
+                        classify blue and red points on multiple 2d planes.
+                        There were three parameters that controlled the code,
+                        one was the dataset, the sample and the depth.
+                      </p>
+                      <p>
+                        This assignment was a good test of my problem solving
+                        skills and gave me practice working on a machine
+                        learning algorithm with multiple parameters. Each
+                        parameter adds complexity to the algorithm which is a
+                        good test of the design and implementation of a machine
+                        learning algorithm.
+                      </p>
+                    </div>
+                    <div class="cardList">
+                      <p>Technologies Used:</p>
+                      <ul>
+                        <li>Python</li>
+                      </ul>
+                      <p>
+                        <a
+                          href="https://github.com/odinsontm/odinsontm.github.io/tree/main/projects/CMPT%20311"
                           target="_blank"
                           >Click here to view source code</a
                         >
@@ -315,13 +444,17 @@
                         This project was a part of CMPT 307 where a partner and
                         I created a inventory of the Westminster Ski Team, their
                         type of skis, and the brands of the skis. There is also
-                        information about each skier on the team.
+                        information about each skier on the team. We also
+                        created a interface that connected to the database and
+                        could send queries and display responses to the user.
                       </p>
                       <p>
                         Completing this course gave me valuable experience in
                         database schema design and useage. This project gave me
                         experience working in a small team in which we created,
                         managed, and interacted with SQL queries and databases.
+                        It also gave us experience in creating basic client side
+                        applications that connect to a SQL database.
                       </p>
                     </div>
                     <div class="cardList">
@@ -357,16 +490,18 @@
                   <div class="cardBody">
                     <div class="mainText">
                       <p>
-                        This project was a part of CMPT 351 Operating Systems 
+                        This project was a part of CMPT 351 Operating Systems
                         where I created a simple shell that parses commands and
-                        remembers previous commands. This was developed in C. 
+                        remembers previous commands. This was developed in C.
                         This program also exits upon user command.
                       </p>
                       <p>
                         Developing this shell gave me experience in system-level
-                        development and dealing with system commands. This was a 
-                        difficult project as I had not done much in operating
-                        system programing previously. 
+                        development and dealing with operating system commands.
+                        This was a difficult project as I had not done much in
+                        operating system programing previously and programing
+                        this in C forced the design to be cautious of memory
+                        allocation and usage.
                       </p>
                     </div>
                     <div class="cardList">
@@ -378,7 +513,7 @@
                         <a
                           href="https://github.com/odinsontm/odinsontm.github.io/tree/main/projects/CMPT%20351"
                           target="_blank"
-                          >Click here to view program and schema</a
+                          >Click here to view source code</a
                         >
                       </p>
                     </div>
