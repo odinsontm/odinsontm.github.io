@@ -16,13 +16,6 @@
       * {
         font-family: 'Arimo', sans-serif;
       }
-      header {
-        padding: 0 5% 0 5%;
-        overflow: hidden;
-        top: 0;
-        width: 100%;
-        height: 5rem;
-      }
       body {
         background: #111;
         width: 100vw;
@@ -31,7 +24,8 @@
         overflow-x: hidden;
       }
       .wrapper {
-        margin: 0 5% 0 5%;
+        margin: 0 0 0 5%;
+        overflow: hidden;
       }
 
       h1,
@@ -68,7 +62,90 @@
         color: #b3b3b3;
       }
 
+      
+
+      .newCard .cardLeft img {
+        height: 65vh;
+        width: 27vw;
+        object-fit: cover;
+        mask-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.65) 100%
+        );
+        -webkit-mask-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.65) 100%
+        );
+      }
+
+      
+
+      @media only screen and (max-width: 1000px){
+        header {
+        overflow: hidden;
+        top: 0;
+        width: 100%;
+        height: 5rem;
+      }
+        
+        .newCard .cardLeft .title {
+        color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 10rem;
+      }
+      article {
+        display: grid;
+        grid-gap: 5px;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
       .newCard hr {
+        background: linear-gradient(to right, #fdbc2a, #b11f1e, #1d296c);
+        height: 5px;
+        border: 0;
+        width: 100%;
+      }
+
+      .newCard {
+        background: #000000;
+        border-radius: 10px;
+        min-height: 60vh;
+        width: 95%;
+        transition: 350ms;
+        box-shadow: -2rem 0 3rem -2rem #000;
+      }
+
+      .newCard .cardLeft {
+        height: 100%;
+      }
+
+      .newCard .cardRight {
+        padding: 0 2rem 0 2rem;
+        transition: 350ms;
+        overflow-y: scroll;
+        display: block;
+      }
+      }
+
+      @media only screen and (min-width: 1001px) {
+        header {
+        padding: 0 5% 0 5%;
+        overflow: hidden;
+        top: 0;
+        width: 100%;
+        height: 5rem;
+      }
+        .newCard .cardLeft .title {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        color: white;
+      }
+        .newCard hr {
         background: linear-gradient(to right, #fdbc2a, #b11f1e, #1d296c);
         height: 5px;
         border: 0;
@@ -92,29 +169,6 @@
         position: relative;
       }
 
-      .newCard .cardLeft img {
-        height: 65vh;
-        width: 27vw;
-        object-fit: cover;
-        mask-image: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.65) 100%
-        );
-        -webkit-mask-image: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.65) 100%
-        );
-      }
-
-      .newCard .cardLeft .title {
-        position: absolute;
-        bottom: 8px;
-        left: 16px;
-        color: white;
-      }
-
       .newCard .cardRight {
         width: 40vw;
         margin-left: 3rem;
@@ -129,7 +183,7 @@
         transition: 350ms;
       }
 
-      .newCard:hover .cardLeft + .cardRight {
+      .newCard:hover .cardLeft + .cardRight{
         display: inline-flex;
         transition: 350ms;
       }
@@ -167,6 +221,7 @@
         display: flex;
         justify-content: center;
       }
+    }
       header img {
         margin: 1rem 0 1rem 0;
         height: 3rem;
