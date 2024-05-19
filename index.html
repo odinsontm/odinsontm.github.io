@@ -24,9 +24,10 @@
         overflow-x: hidden;
       }
       .wrapper {
-        margin: 0 0 0 5%;
+        margin: 0 5% 0 5%;
         overflow: hidden;
       }
+
 
       h1,
       h2,
@@ -86,9 +87,10 @@
         header {
         overflow: hidden;
         top: 0;
-        width: 95%;
+        width: 90%;
         height: 5rem;
         padding-left: 5%;
+        padding-top: 2%;
       }
         
         .newCard .cardLeft .title {
@@ -114,7 +116,7 @@
         background: #000000;
         border-radius: 10px;
         min-height: 60vh;
-        width: 95%;
+        width: 100%;
         transition: 350ms;
         box-shadow: -2rem 0 3rem -2rem #000;
       }
@@ -129,11 +131,15 @@
         overflow-y: scroll;
         display: block;
       }
+
+      .swipeAlert{
+        display: none;
+      }
       }
 
       @media only screen and (min-width: 1001px) {
         header {
-        padding: 0 5% 0 5%;
+        padding: 2% 5% 0 5%;
         overflow: hidden;
         top: 0;
         width: 100%;
@@ -221,6 +227,9 @@
         display: flex;
         justify-content: center;
       }
+      .swipeAlert{
+        display: block;
+      }
     }
       header img {
         margin: 1rem 0 1rem 0;
@@ -257,13 +266,13 @@
           >
         </h4>
         <hr />
-
+        <p class="swipeAlert">Swipe for more -></p>
         <article>
           <section>
             <span>
               <div class="newCard">
                 <div class="cardLeft">
-                  <img src="docs/assets/TheDeftPic.jpg" alt="TheDeft" />
+                  <img src="docs/assets/pfppng.png" alt="TheDeft" />
                   <div class="title">
                     <h1>TheDEFT</h1>
                     <hr />
